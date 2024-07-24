@@ -1,0 +1,262 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>OtakuPlayhub</title>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="styles.css">
+            <title>OtakuPlayhub</title>
+            <style>
+              /* Estilo para el fondo de la página */
+              body {
+                    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                /* Estilo para el encabezado */
+                header {
+                    background-color: rgba(0, 123, 255, 0.8);
+                    color: rgb(255, 255, 255);
+                    text-align: center;
+                    padding: 20px 0;
+                }
+        
+                /* Estilo para la barra de navegación */
+                nav {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: rgb(255, 255, 255);
+                    text-align: center;
+                    padding: 10px 0;
+                }
+        
+                nav ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                nav ul li {
+                    display: inline;
+                    margin-right: 20px;
+                }
+        
+                nav ul li a {
+                    color: rgb(255, 255, 255);
+                    text-decoration: none;
+                }
+        
+                /* Estilo para las secciones */
+                section {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    padding: 20px;
+                    margin: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                }
+        
+                section h2 {
+                    color: #007BFF;
+                    text-align: center;
+                }
+        
+                section ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+        
+                section ul li {
+                    margin-bottom: 10px;
+                }
+        
+                section ul li a {
+                    color: #007BFF;
+                    text-decoration: none;
+                }
+        
+                /* Estilo para el pie de página */
+                footer {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: rgba(255, 255, 255, 0.8);
+                    text-align: center;
+                    padding: 20px 0;
+                }
+        
+                footer ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                footer ul li {
+                    display: inline;
+                    margin-right: 10px;
+                }
+        
+                footer ul li a {
+                    color: rgba(255, 255, 255, 0.8);
+                    text-decoration: none;
+                }
+            </style>
+</head>
+<body>
+
+    <!-- Encabezado y barra de navegación -->
+    <header>
+        <h1>OtakuPlayhub</h1>
+        <p>¡Donde la pasión se encuentra con la diversión!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="juegos.html">Juegos</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="descargas.html">Descargas</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="foro.html">Foro</a></li>
+            <li><a href="recompensas.html">Recompensas</a></li>
+            <li><a href="sobre-la-web.html">Sobre la Web</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor de Búsqueda y Selector de Etiquetas -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterByTag()">
+        <select id="tagSelect" onchange="filterByTag()">
+            <option value="">Todas las etiquetas</option>
+            <option value="anime">Anime</option>
+            <option value="juegos">Juegos</option>
+            <option value="musica">Música</option>
+            <option value="descargas">Descargas</option>
+            <option value="noticias">Noticias</option>
+            <option value="foro">Foro</option>
+            <option value="recompensas">Recompensas</option>
+            <option value="sobre la web">sobre la web</option>
+        </select>
+    </div>
+
+<!-- Sección de Recompensas -->
+<section id="recompensas">
+    <h2>Recompensas</h2>
+    <p>¡Explora nuestras increíbles recompensas y beneficios!</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/3729/3729043.png" alt="Icono de recompensas" style="width: 300px; height: auto;"> 
+    <!-- Información sobre las recompensas -->
+</section>
+
+<!-- Sección de Anime -->
+<section id="anime">
+    <h2>Anime</h2>
+    <p>¡Explora el fascinante mundo del anime!</p>
+    <img src="https://static.vecteezy.com/system/resources/previews/024/212/245/original/ai-generated-sticker-anime-girl-purple-hair-png.png" alt="Descripción" style="width: 300px; height: auto;">
+</section>
+
+<!-- Sección de Juegos -->
+<section id="juegos">
+    <h2>Juegos</h2>
+    <p>¡Sumérgete en emocionantes aventuras y desafíos!</p>
+    <img src="https://icones.pro/wp-content/uploads/2022/07/icone-jeux-et-jeux-video-rose.png" alt="Icono de juegos" style="width: 300px; height: auto;">
+</section>
+
+<!-- Sección de Música -->
+<section id="musica">
+    <h2>Música</h2>
+    <p>¡Descubre nuevas melodías y bandas sonoras asombrosas!</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/1987/1987997.png" alt="Icono de música" style="width: 300px; height: auto;">
+    <!-- Información del autor -->
+</section>
+
+<!-- Sección de Noticias -->
+<section id="noticias">
+    <h2>Noticias</h2>
+    <p>¡Mantente al tanto de las últimas novedades del mundo otaku!</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/5131/5131334.png" alt="Icono de noticias" style="width: 300px; height: auto;">
+</section>
+
+<!-- Sección de Foro -->
+<section id="foro">
+    <h2>Foro</h2>
+    <p>¡Únete a la comunidad otaku y comparte tus experiencias!</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/2495/2495007.png" alt="Icono de foro" style="width: 300px; height: auto;">
+    <div id="publicaciones">
+        <!-- Aquí se mostrarán las publicaciones -->
+    </div>
+</section>
+
+<!-- Sección de Descargas -->
+<section id="descargas">
+    <h2>Descargas</h2>
+    <p>¡Obtén tus contenidos favoritos para disfrutar en cualquier momento!</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/9533/9533161.png" alt="Icono de descargas" style="width: 300px; height: auto;">
+</section>
+
+    <!-- Sección de Comentarios -->
+    <section id="comentarios">
+        <h2>Comentarios</h2>
+        <!-- Contenedor de comentarios de Disqus -->
+        <div id="disqus_thread"></div>
+        <script>
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-anime1234r-github-io-web-descargas.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Sígueme en:</p>
+        <ul class="social-links">
+            <li><a href="https://www.youtube.com/@anime1234rr/videos" target="_blank">YouTube</a></li>
+            <li><a href="https://www.twitch.tv/anime1234rr" target="_blank">Twitch</a></li>
+            <li><a href="https://discord.gg/shQv6yjx" target="_blank">Discord</a></li>
+            <li><a href="https://twitter.com/anime1234r" target="_blank">Twitter</a></li>
+        </ul>
+        <p>Contáctame en: <a href="mailto:arandaa6262@gmail.com">arandaa6262@gmail.com</a></p>
+    </footer>
+
+    <!-- Script para manejar eventos de scroll y filtrado -->
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function filterByTag() {
+            var input, filter, sections, section, tags, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toLowerCase();
+            tag = document.getElementById('tagSelect').value.toLowerCase();
+            sections = document.querySelectorAll('section');
+            
+            for (i = 0; i < sections.length; i++) {
+                section = sections[i];
+                tags = section.id.toLowerCase();
+                txtValue = section.textContent || section.innerText;
+                // Agregar texto alternativo de las imágenes a la búsqueda
+                var images = section.getElementsByTagName('img');
+                for (var j = 0; j < images.length; j++) {
+                    txtValue += images[j].alt.toLowerCase();
+                }
+                if (txtValue.indexOf(filter) > -1 && (tag === '' || tags.indexOf(tag) > -1)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html
