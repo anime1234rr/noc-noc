@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario de Subida de Juegos - OtakuPlayhub</title>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/vector-gratis/diseno-fondo-abstracto-luces-neon_52683-44643.jpg?w=360'); /* Cambia 'ruta_de_la_imagen_de_fondo.jpg' por la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"],
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data" style="display: none;">
+        <label for="gameFile">Selecciona un archivo de juego:</label>
+        <input type="file" id="gameFile" name="gameFile">
+        <label for="author">Autor del juego:</label>
+        <input type="text" id="author" name="author">
+        <label for="genre">Género del juego:</label>
+        <input type="text" id="genre" name="genre">
+        <input type="submit" value="Subir archivo">
+        <div id="errorMessages"></div>
+    </form>
+
+    <button id="showFormButton">Subir Juego</button>
+
+    <script>
+        document.getElementById('showFormButton').addEventListener('click', function() {
+            document.getElementById('uploadForm').style.display = 'block';
+            this.style.display = 'none';
+        });
+
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            var gameFile = document.getElementById('gameFile').value;
+            var author = document.getElementById('author').value;
+            var genre = document.getElementById('genre').value;
+            var errorMessages = document.getElementById('errorMessages');
+
+            errorMessages.innerHTML = '';
+
+            if (!gameFile) {
+                errorMessages.innerHTML += '<p class="error">Por favor selecciona un archivo de juego.</p>';
+                event.preventDefault();
+            }
+
+            if (!author) {
+                errorMessages.innerHTML += '<p class="error">Por favor ingresa el autor del juego.</p>';
+                event.preventDefault();
+            }
+
+            if (!genre) {
+                errorMessages.innerHTML += '<p class="error">Por favor ingresa el género del juego.</p>';
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
+
+

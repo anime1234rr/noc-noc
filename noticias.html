@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo para el fondo de la página */
+        body {
+            background-image: url('https://i.pinimg.com/736x/ca/5f/6f/ca5f6fd617feca47c0b3f4a03ae98a4e.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo para el encabezado */
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Estilo para la barra de navegación */
+        nav {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Estilo para la sección de noticias */
+        .news-section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .news-section h2 {
+            color: #007BFF;
+            text-align: center;
+        }
+
+        .news-section .article {
+            overflow: hidden;
+        }
+
+        .news-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .news-section h3 {
+            color: #007BFF;
+        }
+
+        .news-section p {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        .news-section p a {
+            color: #007BFF;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Estilo para el pie de página */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+
+    <title>Noticias - OtakuPlayhub</title>
+</head>
+<body>
+    <header>
+        <h1>Noticias</h1>
+        <p>¡Mantente al tanto de las últimas novedades del mundo otaku!</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="juegos.html">Juegos</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="descargas.html">Descargas</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="foro.html">Foro</a></li>
+            <li><a href="recompensas.html">Recompensas</a></li>
+            <li><a href="sobre-la-web.html">Sobre la Web</a></li>
+        </ul>
+    </nav>
+
+        <!-- Contenedor de Búsqueda y Selector de Etiquetas -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterByTag()">
+            <select id="tagSelect" onchange="filterByTag()">
+                <option value="">Todas las etiquetas</option>
+                <option value="Inicio">Inicio</option>
+                <option value="anime">Anime</option>
+                <option value="juegos">Juegos</option>
+                <option value="musica">Música</option>
+                <option value="descargas">Descargas</option>
+                <option value="noticias">Noticias</option>
+                <option value="foro">Foro</option>
+                <option value="recompensas">Recompensas</option>
+                <option value="sobre la web">sobre la web</option>
+            </select>
+        </div>
+
+    <section class="news-section">
+        <!-- Contenido de noticias -->
+        <h2>Últimas Noticias</h2>
+        <!-- Artículo de ejemplo -->
+        <div class="article">
+            <div style="overflow: hidden;">
+                <img src="https://media.discordapp.net/attachments/1005196410846711809/1206686733664788500/GGIlHwmbkAABlmP.jpg?ex=65dce998&is=65ca7498&hm=a861a03cbe77ae8e57660311c39b3061204aece7599cfc6ea829c7efd0a0d082&=&format=webp&width=488&height=671" alt="Imagen de la noticia">
+                <h3>Título de la noticia</h3>
+                <p>tu web favorita en acción.</p>
+                <p><a href="#">Leer más</a></p>
+            </div>
+        </div>
+    </section>
+           <!-- Sección de Comentarios -->
+        <section id="comentarios">
+            <h2>Comentarios</h2>
+            <!-- Contenedor de comentarios de Disqus -->
+            <div id="disqus_thread"></div>
+            <script>
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-anime1234r-github-io-web-descargas.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    <footer>
+        <!-- Pie de página -->
+        <p>Síguenos en nuestras redes:</p>
+        <ul class="social-links">
+            <li><a href="https://www.youtube.com/@anime1234rr/videos" target="_blank">YouTube</a></li>
+            <li><a href="https://www.twitch.tv/anime1234rr" target="_blank">Twitch</a></li>
+            <li><a href="https://discord.gg/shQv6yjx" target="_blank">Discord</a></li>
+            <li><a href="https://twitter.com/anime1234r" target="_blank">Twitter</a></li>
+        </ul>
+        <p>Contáctanos en: <a href="mailto:arandaa6262@gmail.com">arandaa6262@gmail.com</a></p>
+    </footer>
+</body>
+</html>
+

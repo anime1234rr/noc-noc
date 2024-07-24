@@ -1,0 +1,173 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f7ff; /* Azul claro para el fondo */
+    color: #050404; /* Texto oscuro para mayor legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0056b3; /* Azul oscuro para el encabezado */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #007BFF; /* Azul vibrante para la barra de navegación */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para las secciones */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #0056b3; /* Azul oscuro para los títulos de secciones */
+}
+
+footer {
+    background-color: #007BFF; /* Azul vibrante para el pie de página */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button, .boton {
+    background-color: #0056b3; /* Azul oscuro para los botones */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #004080; /* Azul más oscuro al pasar el ratón sobre el botón */
+}
+
+/* Estilos adicionales para el resto de la página */
+.seccionDesarrollo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.centrar {
+    text-align: center;
+}
+
+#searchInput {
+    /* Estilos para el campo de búsqueda */
+}
+
+#tagSelect {
+    /* Estilos para el selector de etiquetas */
+}
+
+.search-container {
+    /* Estilos para el contenedor de búsqueda y etiquetas */
+}
+
+.musica-info img {
+    /* Estilos para las imágenes dentro de la sección de música */
+}
+
+button:hover {
+    /* Estilo para animación al pasar el cursor sobre los botones */
+}
+
+header:hover {
+    /* Animación de fondo al pasar el cursor sobre el encabezado */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f7ff; /* Azul claro para el fondo */
+    color: #050404; /* Texto oscuro para mayor legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+/* ... otros estilos ... */
+
+#manhwas-web-hentais {
+    background-color: #9b9797; /* Un color de fondo claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Una sombra ligera para resaltar la sección */
+}
+
+#manhwas-web-hentais ul {
+    list-style: none; /* Remueve los estilos de lista por defecto */
+    padding: 0;
+}
+
+#manhwas-web-hentais li {
+    margin-bottom: 15px; /* Espaciado entre elementos de lista */
+    align-items: center; /* Alinea elementos verticalmente */
+    display: flex; /* Crea un layout flexible */
+}
+
+#manhwas-web-hentais img {
+    max-width: 100px; /* Limita el tamaño de las imágenes */
+    margin-right: 15px; /* Espaciado entre la imagen y el botón */
+}
+
+.btn-visit {
+    padding: 10px 15px;
+    background-color: #007bff; /* Color azul para el botón */
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase; /* Opcional: estiliza el texto en mayúsculas */
+}
+
+.btn-visit:hover {
+    background-color: #0056b3; /* Azul más oscuro para el hover del botón */
+}
+
+/* ... el resto de tus estilos ... */
+
