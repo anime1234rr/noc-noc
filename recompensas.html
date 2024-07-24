@@ -125,9 +125,8 @@
         <!-- Contenedor de Búsqueda y Selector de Etiquetas -->
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterByTag()">
-            <select id="tagSelect" onchange="filterByTag()">
+            <select id="tagSelect" title="Filtrar por etiqueta" onchange="filterByTag()">
                 <option value="">Todas las etiquetas</option>
-                <option value="Inicio">Inicio</option>
                 <option value="anime">Anime</option>
                 <option value="juegos">Juegos</option>
                 <option value="musica">Música</option>
@@ -135,8 +134,9 @@
                 <option value="noticias">Noticias</option>
                 <option value="foro">Foro</option>
                 <option value="recompensas">Recompensas</option>
-                <option value="sobre la web">sobre la web</option>
+                <option value="sobre la web">Sobre la web</option>
             </select>
+            
         </div>
 
     <section>
@@ -166,16 +166,17 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
 
-    <footer>
-        <p>Sígueme en mis redes:</p>
-        <ul>
-            <li><a href="https://www.youtube.com/@anime1234rr/videos" target="_blank">YouTube</a></li>
-            <li><a href="https://www.twitch.tv/anime1234rr" target="_blank">Twitch</a></li>
-            <li><a href="https://discord.gg/shQv6yjx" target="_blank">Discord</a></li>
-            <li><a href="https://twitter.com/anime1234r" target="_blank">Twitter</a></li>
-        </ul>
-        <p>Contáctame en: <a href="mailto:arandaa6262@gmail.com">arandaa6262@gmail.com</a></p>
-    </footer>
+        <footer>
+            <p>Sígueme en:</p>
+            <ul class="social-links">
+                <li><a href="https://www.youtube.com/@anime1234rr/videos" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                <li><a href="https://www.twitch.tv/anime1234rr" target="_blank" rel="noopener noreferrer">Twitch</a></li>
+                <li><a href="https://discord.gg/shQv6yjx" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                <li><a href="https://twitter.com/anime1234r" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            </ul>
+            <p>Contáctame en: <a href="mailto:arandaa6262@gmail.com">arandaa6262@gmail.com</a></p>
+        </footer>
+    
 
     <script>
         // Hacer una solicitud al servidor para obtener la lista de juegos
