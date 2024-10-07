@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="styles.css">
    
     <style>
-        /* Estilo para el fondo de la página */
         body {
               background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg');
               background-size: cover;
@@ -15,8 +14,7 @@
               margin: 0;
               padding: 0;
           }
-  
-          /* Estilo para el encabezado */
+        
           header {
               background-color: rgba(0, 123, 255, 0.8);
               color: rgba(255, 255, 255, 0.8);
@@ -24,7 +22,6 @@
               padding: 20px 0;
           }
   
-          /* Estilo para la barra de navegación */
           nav {
               background-color: rgba(0, 0, 0, 0.5);
               color: rgba(255, 255, 255, 0.8);
@@ -48,7 +45,6 @@
               text-decoration: none;
           }
   
-          /* Estilo para las secciones */
           section {
               background-color: rgba(255, 255, 255, 0.8);
               padding: 20px;
@@ -75,8 +71,7 @@
               color: #007BFF;
               text-decoration: none;
           }
-  
-          /* Estilo para el pie de página */
+        
           footer {
               background-color: rgba(0, 0, 0, 0.5);
               color: rgba(255, 255, 255, 0.8);
@@ -121,8 +116,7 @@
             <li><a href="sobre-la-web.html">Sobre la Web</a></li>
         </ul>
     </nav>
-
-        <!-- Contenedor de Búsqueda y Selector de Etiquetas -->
+    
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterByTag()">
             <select id="tagSelect" title="Filtrar por etiqueta" onchange="filterByTag()">
@@ -137,17 +131,29 @@
                 <option value="sobre la web">Sobre la web</option>
             </select>
             
-        </div>
+    </div>
 
-    <section>
-        <section id="rewards">
-            <h2>Recompensas</h2>
-            <div id="chest-container">
-                <img src="https://media.discordapp.net/attachments/1005196410846711809/1210654206034444400/32c7bca9-ef5f-4152-8475-7bd229ee478e.webp?ex=65eb5897&is=65d8e397&hm=560aee7f9bc06eac137412e7e63ced4213e3fba75407b5a2e7131d45462ab707&=&format=webp&width=671&height=671" id="closedChest" alt="Cofre Cerrado" />
-                <img src="https://files.oaiusercontent.com/file-p7muRD9Tr3D5JCss6GoOS99g?se=2024-02-23T18%3A28%3A22Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D299%2C%20immutable&rscd=attachment%3B%20filename%3D78f49349-2d4b-4986-a507-236d2dd4eb7c.webp&sig=U/JG8edyk8/Y1kmG6EUM7muV5YquLuuxDowo479tCII%3D" id="openChest" alt="Cofre Abierto" style="display:none;" />
-            </div>
-            <button id="openChestButton">No Disponible</button>
-        </section>
+    <section id="rewards">
+    <h2>Recompensas</h2>
+    <div id="chest-container">
+        <img src="https://w7.pngwing.com/pngs/441/915/png-transparent-buried-treasure-chest-treasure-hunting-hoard-others-furniture-child-family-thumbnail.png" id="closedChest" alt="Cofre Cerrado" style="width: 200px; height: auto;" />
+        <img src="https://example.com/open-chest.png" id="openChest" alt="Cofre Abierto" style="display:none; width: 200px; height: auto;" />
+    </div>
+    <button id="openChestButton">Abrir Cofre</button>
+</section>
+
+<script>
+    const chestButton = document.getElementById('openChestButton');
+    const closedChest = document.getElementById('closedChest');
+    const openChest = document.getElementById('openChest');
+
+    chestButton.addEventListener('click', function() {
+        closedChest.style.display = 'none';
+        openChest.style.display = 'block';
+        chestButton.textContent = 'Premio recibido';
+        chestButton.disabled = true;
+    });
+</script>
     
      <section>
          <!-- Sección de Comentarios -->
@@ -179,7 +185,6 @@
     
 
     <script>
-        // Hacer una solicitud al servidor para obtener la lista de juegos
         fetch('get_games.php')
             .then(response => response.json())
             .then(data => {
