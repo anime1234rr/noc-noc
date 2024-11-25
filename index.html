@@ -50,7 +50,8 @@
 
         /* Estilo para las secciones */
         section {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba
+(255, 255, 255, 0.8);
             padding: 20px;
             margin: 20px;
             border-radius: 10px;
@@ -123,21 +124,40 @@
     </nav>
 
     <!-- Contenedor de Búsqueda y Selector de Etiquetas -->
-    <div class="search-container">
+      <div class="search-container">
         <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="filterByTag()">
-        <select id="tagSelect" title="Filtrar por etiqueta" onchange="filterByTag()">
+        <select id="tagSelect" title="Filtrar por etiqueta" onchange="redirectByTag()">
             <option value="">Todas las etiquetas</option>
-            <option value="anime">Anime</option>
-            <option value="juegos">Juegos</option>
-            <option value="musica">Música</option>
-            <option value="descargas">Descargas</option>
-            <option value="noticias">Noticias</option>
-            <option value="foro">Foro</option>
-            <option value="recompensas">Recompensas</option>
-            <option value="sobre la web">Sobre la web</option>
+            <option value="anime.html">Anime</option>
+            <option value="juegos.html">Juegos</option>
+            <option value="musica.html">Música</option>
+            <option value="descargas.html">Descargas</option>
+            <option value="noticias.html">Noticias</option>
+            <option value="foro.html">Foro</option>
+            <option value="recompensas.html">Recompensas</option>
+            <option value="sobre.html">Sobre la web</option>
         </select>
-        
     </div>
+
+    <script>
+        // Función para redirigir según la selección
+        function redirectByTag() {
+            const select = document.getElementById("tagSelect");
+            const selectedValue = select.value;
+
+            if (selectedValue) {
+                // Redirige a la página seleccionada
+                window.location.href = selectedValue;
+            }
+        }
+
+        // Función para buscar (placeholder, puedes implementarla)
+        function filterByTag() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            console.log("Buscando: " + input);
+            // Aquí puedes implementar la lógica de búsqueda
+        }
+    </script>
 
     <!-- Sección de Recompensas -->
     <section id="recompensas">
